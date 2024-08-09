@@ -11,10 +11,10 @@ class Database{
 	 * means that they will only be available with the 
 	 * Database class
 	 */
-	private $db_host = "localhost";  // Change as required
-	private $db_user = "user";  // Change as required
+	private $db_host = "db";  // Change as required
+	private $db_user = "php_docker";  // Change as required
 	private $db_pass = "password";  // Change as required
-	private $db_name = "database";	// Change as required
+	private $db_name = "php_docker";	// Change as required
 	
 	/*
 	 * Extra variables that are required by other function such as boolean con variable
@@ -180,7 +180,7 @@ class Database{
     }
 	
 	// Function to update row in database
-    public function update($table,$params=array(),$where){
+    public function update($table,$params=array(),$where=null){
     	// Check to see if table exists
     	if($this->tableExists($table)){
     		// Create Array to hold all the columns to update
